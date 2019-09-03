@@ -52,3 +52,14 @@ backgroundColor.addEventListener('mouseover', (e) => {
   console.log(`event bubbled up again`);
 })
 
+// step 2: Stop propagation
+
+
+const title = document.querySelector('.intro h2');
+title.addEventListener('mouseover', function(event) {
+  console.log(`clicked`);
+  title.style.color ='green';
+  title.style.transition = 'color 0.5s';
+   event.stopPropagation();
+});
+
